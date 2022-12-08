@@ -13,7 +13,7 @@ jobs:
       matrix:
         node-version: [14.x]
     steps:
-      - run: echo ${{ github.workspace }}
+      - uses: actions/checkout@v2
       - name: Install http
         run: npm install -g http-server
       - name: NPM Install
