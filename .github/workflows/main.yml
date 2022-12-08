@@ -16,10 +16,7 @@ jobs:
       - run: echo ${{ github.workspace }}
       - name: Install http
         run: npm install -g http-server
-        path: ${{ github.workspace }}
       - name: NPM Install
         run: npm start > /dev/null &
-        path: ${{ github.workspace }}
       - name: Test
         run: curl localhost:8080/index.html
-        path: ${{ github.workspace }}
