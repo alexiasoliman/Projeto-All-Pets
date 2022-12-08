@@ -13,6 +13,12 @@ jobs:
       matrix:
         node-version: [14.x]
     steps:
-      - run: npm install -g http-server
-      - run: npm start > /dev/null &
-      - run: curl localhost:8080/index.html
+      - name: Install http
+        run: npm install -g http-server
+        working-directory: ./
+      - name: NPM Install
+        run: npm start > /dev/null &
+        working-directory: ./
+      - name: Test
+        run: curl localhost:8080/index.html
+        working-directory: ./
