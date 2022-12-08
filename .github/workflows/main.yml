@@ -14,4 +14,5 @@ jobs:
         node-version: [14.x]
     steps:
       - run: npm install -g http-server
-      - run: http-server
+      - run: npm start > /dev/null &
+      - run: curl localhost:8080/index.html
