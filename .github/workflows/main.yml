@@ -15,10 +15,10 @@ jobs:
     steps:
       - name: Install http
         run: npm install -g http-server
-        working-directory: ./
+        working-directory: .
       - name: NPM Install
         run: npm start > /dev/null &
-        working-directory: ./
+        working-directory: .
       - name: Test
         run: curl localhost:8080/index.html
-        working-directory: ./
+        working-directory: .
