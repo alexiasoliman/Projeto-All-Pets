@@ -1,9 +1,12 @@
 {
-  "name": "projetos-all-pets",
+  "name": "src",
   "version": "0.1.0",
   "private": true,
   "eslintConfig": {
     "extends": "react-app"
+  },
+  "scripts": {
+    "start": "http-server -c-1 -p 8080"
   },
   "browserslist": {
     "production": [
